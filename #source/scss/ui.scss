@@ -1,0 +1,499 @@
+@import "variables.scss";
+@import "nullstyle.scss";
+
+//============================================<------------=========BODY===============------------>===============================================================================================
+body._scroll-lock {
+	overflow: hidden;
+}
+
+body._burger-menu-lock {
+	overflow: hidden;
+}
+
+body._search-scroll-lock {
+	overflow: hidden;
+}
+
+.page._active {
+	position: relative;
+	z-index: 10;
+
+	&:before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-color: #1e1e1e21;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 10;
+
+		@media (max-width: $md5) {
+			display: none;
+		}
+	}
+}
+
+body {
+	font-family: $fontFamily;
+
+}
+
+//=====================================<КЛАССЫ-ПО-УМОЛЧАНИЮ>======================================================================================================================
+.ibg {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+
+	img {
+		display: none;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-height: 100%;
+}
+
+.container {
+	max-width: $containerWidth;
+	padding: 0px 15px;
+	margin: 0px auto;
+}
+
+
+
+//=====================================<РАЗНЫЕ КЛАССЫ>==========================================================================================================================================================================================================================================================
+._init {}
+
+._active {}
+
+._scroll {}
+
+._not-scroll {}
+
+._white {}
+
+._gray {}
+
+._black {}
+
+._not-that {}
+
+._another-color {}
+
+._disabled {}
+
+//==============<COVER>=================================================================================================================================================================================================================================================================================
+.cover {
+	position: relative;
+	flex: 1 0 100%;
+}
+
+.cover__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+//============<FULLSCREEN>=============================================================================================================================================================
+
+//===================BURGER-MENU============================================================================================================================================================================================================================================================================
+
+//================FIXED MENU==============================================================================================================================================================================================================================================================================
+
+//=======================================================<ОДИНАКОВЫЕ=КЛАССЫ=ДЛЯ=ТЕКСТОВ>================================================================================================
+.title {
+	font-weight: 700;
+	color: $grayColor_1;
+	@include adaptiv-font(28, 22);
+	line-height: calc(32px / 28px * 100%);
+}
+
+._all {
+	padding: 4px 12px;
+	background-color: transparent;
+
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	font-size: 14px;
+	line-height: calc(30px / 14px * 100%);
+	color: $grayColor_2;
+	font-weight: 500;
+	border: 1px solid $grayColor_2;
+	border-radius: 8px;
+	transition: all 0.3s ease 0s;
+
+	@media(any-hover: hover) {
+		&:hover {
+			background-color: $orangeColorMedium;
+			transition: all 0.3s ease 0s;
+			border: 1px solid $orangeColorMedium;
+			color: #fff;
+
+			&:before {
+				color: #fff;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+
+	&:before {
+		font-size: 10px;
+		margin: 0px 0px 0px 10px;
+		transition: all 0.3s ease 0s;
+	}
+}
+
+.radio-button {
+	input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&._gray-radio-button {
+		span {
+			background-color: $grayColor_5;
+			transition: all 0.3s ease 0s;
+			border: none;
+		}
+	}
+
+	cursor: pointer;
+
+	span {
+		position: relative;
+		border: 1px solid $grayColor_2;
+		justify-self: start;
+		min-width: 30px;
+		min-height: 30px;
+		display: flex;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease 0s;
+		margin: 0px 8px 0px 0px;
+
+		&:before {
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	&._active {
+		transition: all 0.3s ease 0s;
+		color: $orangeColorMedium;
+
+		span {
+			background-color: $orangeColorMedium;
+			transition: all 0.3s ease 0s;
+			border: 1px solid $orangeColorMedium;
+			margin: 0px 8px 0px 0px;
+
+			&:before {
+				color: #fff;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+}
+
+.input {
+
+	width: 100%;
+	position: relative;
+
+	p {
+		font-size: 12px;
+		line-height: calc(16px / 12px * 100%);
+		font-weight: 400;
+		color: $grayColor_6;
+	}
+
+	&.icon-close-add {
+		&:before {
+			transform: rotate(45deg);
+			color: #FF0000;
+		}
+	}
+
+	&._error {
+		input {
+			background-color: #FFE2E2;
+			border: 1px solid #FF0000;
+			color: #FF0000;
+
+		}
+	}
+
+	>span {
+		color: #FF0000;
+		font-size: 12px;
+		line-height: calc(16px / 12px * 100%);
+		opacity: 0;
+		visibility: hidden;
+		transform: scale(0);
+		transition: all 0.3s ease 0s;
+		position: absolute;
+		bottom: -16px;
+		left: 6px;
+	}
+
+	&._active {
+		label {
+			top: 4px;
+			transition: all 0.3s ease 0s;
+			font-size: 12px;
+			line-height: calc(12px / 12px * 100%);
+
+		}
+	}
+
+	&:before {
+		position: absolute;
+		top: 19px;
+		right: 12px;
+		z-index: 2;
+	}
+
+	&._error {
+
+		>span {
+			opacity: 1;
+			visibility: visible;
+			transform: scale(1);
+			transition: all 0.3s ease 0s;
+		}
+
+	}
+
+	input {
+		width: 100%;
+		border-radius: 12px;
+		border: 1px solid $grayColor_6;
+		background-color: #fff;
+		padding: 16px 12px;
+		font-size: 16px;
+		line-height: calc(16px / 16px * 100%);
+		font-weight: 400;
+		color: $grayColor_1;
+
+	}
+
+	label {
+		transition: all 0.3s ease 0s;
+		position: absolute;
+		top: 19px;
+		left: 12px;
+		z-index: 2;
+		pointer-events: none;
+		font-size: 16px;
+		line-height: calc(16px / 16px * 100%);
+		font-weight: 400;
+		color: $grayColor_6;
+
+		span {
+			color: $orangeColorBold;
+
+		}
+	}
+}
+
+._gray-text {}
+
+.cart-title {
+	font-size: 18px;
+	line-height: calc(22px / 18px * 100%);
+	font-weight: 600;
+	color: $grayColor_2;
+}
+
+.plus-quantity {}
+
+.value-quantity {}
+
+.minus-quantity {}
+
+.open-favourite {}
+
+.open-delete {}
+
+
+.registration-title {
+	@include adaptiv-font(22, 20);
+	line-height: calc(24px / 22px * 100%);
+	font-weight: 600;
+	color: $grayColor_2;
+	margin: 0px 0px calc(20/22* 1em) 0px;
+}
+
+.choose {}
+
+.choose-item {}
+
+
+._pencil {
+	&:before {
+		font-size: 16px;
+		transition: all 0.3s ease 0s;
+	}
+
+	border-radius: 50%;
+	padding: 7px;
+	min-width: 30px;
+	min-height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $grayColor_4;
+
+	@media(any-hover: hover) {
+		&:hover {
+			&:before {
+				color: $orangeColorBold;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+}
+
+._delete {
+	&:before {
+		font-size: 16px;
+		transition: all 0.3s ease 0s;
+	}
+
+	border-radius: 50%;
+	padding: 7px;
+	min-width: 30px;
+	min-height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $grayColor_4;
+
+	@media(any-hover: hover) {
+		&:hover {
+			&:before {
+				color: $orangeColorBold;
+				transition: all 0.3s ease 0s;
+			}
+		}
+	}
+}
+
+.profile-title {
+	color: $grayColor_2;
+	@include adaptiv-font(22, 18);
+	line-height: calc(24px / 22px * 100%);
+	font-weight: 600;
+	@include adaptiv-value("margin-bottom", 24, 12, 1);
+}
+
+//===============================<КЛАССЫ=ПО=ТИПУ=БОРДЕРА>============================================================================================================================
+
+//=================================<КЛАССЫ=ДЛЯ=ТОЧЕК=СТРЕЛОК=СВАЙПЕРА>===========================================================================================
+.swiper-arrow-left {
+	pointer-events: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.4);
+	border: 2px solid #fff;
+	transition: all 0.3s ease 0s;
+	padding: 12px;
+	opacity: 0.8;
+	cursor: pointer;
+
+	@media(any-hover: hover) {
+		&:hover {
+			transition: all 0.3s ease 0s;
+			background-color: $orangeColorMedium;
+		}
+	}
+
+	&:active {
+		transition: all 0.3s ease 0s;
+		background-color: $orangeColorMedium;
+	}
+
+	&:before {
+		color: #fff;
+		font-size: 11px;
+		transition: all 0.3s ease 0s;
+	}
+}
+
+.swiper-arrow-right {
+	pointer-events: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.4);
+	border: 2px solid #fff;
+	transition: all 0.3s ease 0s;
+	padding: 12px;
+	opacity: 0.8;
+	cursor: pointer;
+
+	@media(any-hover: hover) {
+		&:hover {
+			transition: all 0.3s ease 0s;
+			background-color: $orangeColorMedium;
+		}
+	}
+
+	&:active {
+		transition: all 0.3s ease 0s;
+		background-color: $orangeColorMedium;
+	}
+
+	&:before {
+		font-size: 11px;
+		color: #fff;
+		transition: all 0.3s ease 0s;
+	}
+}
+
+.swiper-dotts {
+	.swiper-pagination-bullet {
+		height: 8px;
+		width: 8px;
+		border-radius: 50%;
+		background-color: $grayColor_5;
+		transition: all 0.3s ease 0s;
+	}
+
+	.swiper-pagination-bullet-active {
+		height: 8px;
+		width: 22px;
+		border-radius: 8px;
+		background-color: $orangeColorMedium;
+		transition: all 0.3s ease 0s;
+	}
+}
+
+.swiper-arrows {
+	position: absolute;
+	top: 50%;
+	transform: translate(0%, -50%);
+	pointer-events: none;
+	left: 0;
+	z-index: 5;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

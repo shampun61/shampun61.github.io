@@ -1,0 +1,189 @@
+<article id="popupCall" class="popup _average">
+	<div class="popup__wrapper">
+		<div class="popup__body">
+			<h1 class="popup__title">Заказ обратного звонка</h1>
+			<div class="popup__close close-popup icon-close-add"></div>
+			<form action="#" method="post" class="popup__form form-popup">
+				<div class="form-popup__body">
+					<div class="form-popup__item input icon-check">
+						<label for="timeCall" class="form-popup__label">Время звонка</label> <input type="text" required=""
+							autocomplete="off" name="timeCall" value="15 : --" class="form-popup__input"> <span>Некорректное
+							значение</span>
+					</div>
+					<div class="form-popup__item input icon-check">
+						<label for="number" class="form-popup__label">Телефон<span>*</span></label> <input type="tel"
+							autocomplete="off" required="" name="number" value="+7 (999) 123-45-67"
+							class="form-popup__input"><span>Некорректное значение</span>
+					</div><button type="submit" class="form-popup__button">Заказать</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</article>
+<article id="changeNameProfile" class="popup _average">
+	<div class="popup__wrapper">
+		<div class="popup__body">
+			<h1 class="popup__title">Изменение Ф. И. О.</h1>
+			<div class="popup__close close-popup icon-close-add"></div>
+			<form action="#" method="post" class="popup__form form-popup">
+				<div class="form-popup__body">
+					<div class="form-popup__item input icon-check">
+						<label for="famUser" class="form-popup__label">Фамилия<span>*</span></label> <input type="text"
+							required="" autocomplete="off" name="famUser" value="" class="form-popup__input">
+						<span>Некорректное значение</span>
+					</div>
+					<div class="form-popup__item input icon-check">
+						<label for="nameUser" class="form-popup__label">Имя<span>*</span></label> <input type="text"
+							autocomplete="off" required="" name="nameUser" value=""
+							class="form-popup__input"><span>Некорректное значение</span>
+					</div>
+				</div>
+				<div class="form-popup__item input icon-check _optional">
+					<label for="nameUser" class="form-popup__label">Отчество</label> <input type="text" autocomplete="off"
+						required="" name="nameUser" value="" class="form-popup__input">
+				</div><button type="submit" class="form-popup__button">Изменить</button>
+			</form>
+		</div>
+	</div>
+</article>
+<article id="changeTelProfile" class="popup _average">
+	<div class="popup__wrapper">
+		<div class="popup__body">
+			<h1 class="popup__title">Изменение номера телефона</h1>
+			<div class="popup__close close-popup icon-close-add"></div>
+			<form action="#" method="post" class="popup__form form-popup">
+				<div class="form-popup__body">
+					<div class="form-popup__item input icon-check">
+						<label for="telephone" class="form-popup__label">Телефон<span>*</span></label> <input type="text"
+							required="" autocomplete="tel" name="telephone" value="" class="form-popup__input">
+						<span>Некорректное значение</span>
+					</div><button type="submit" class="form-popup__button">Изменить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</article>
+<article id="changeEmailProfile" class="popup _average">
+	<div class="popup__wrapper">
+		<div class="popup__body">
+			<h1 class="popup__title">Изменение адреса эл. почты</h1>
+			<div class="popup__close close-popup icon-close-add"></div>
+			<form action="#" method="post" class="popup__form form-popup">
+				<div class="form-popup__body">
+					<div class="form-popup__item input icon-check">
+						<label for="telephone" class="form-popup__label">E-mail<span>*</span></label> <input type="text"
+							required="" autocomplete="tel" name="telephone" value="" class="form-popup__input">
+						<span>Некорректное значение</span>
+					</div><button type="submit" class="form-popup__button">Изменить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</article>
+<article id="changePassword" class="popup _average">
+	<div class="popup__wrapper">
+		<div class="popup__body">
+			<h1 class="popup__title">Изменение пароля</h1>
+			<div class="popup__close close-popup icon-close-add"></div>
+			<form action="#" method="post" class="popup__form form-popup">
+				<div class="form-popup__body">
+					<div class="form-popup__item input icon-check">
+						<label for="telephone" class="form-popup__label">Новый пароль<span>*</span></label> <input type="text"
+							required="" autocomplete="tel" name="telephone" value="" class="form-popup__input">
+						<span>Некорректное значение</span>
+					</div>
+					<div class="form-popup__item input icon-check">
+						<label for="passwordConv" class="form-popup__label">Подтверждение пароля<span>*</span></label> <input
+							type="text" required="" autocomplete="passwordConv" name="newPassword" value=""
+							class="form-popup__input"> <span>Некорректное значение</span>
+					</div><button type="submit" class="form-popup__button">Изменить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</article>
+<article id="changeInformationCompany" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__body">
+			<div class="popup__close close-popup icon-close-add"></div>
+			<form action="#" method="post" class="popup__form form-popup">
+				<div class="form-popup__body">
+					<div class="form-popup__block">
+						<h2 class="form-popup__title">Информация о компании:</h2>
+						<div class="form-popup__inputs">
+							<div class="registration__item choose">
+								<a href="#" class="registration__choose-item choose-item _ipp _active"><span>ИП</span></a> <a
+									href="#" class="registration__choose-item choose-item"><span>Юридическое лицо</span></a>
+							</div>
+							<div class="registration__item input">
+								<label for="email" autocomplete="off" class="registration__label">Название
+									организации<span>*</span></label> <input autocomplete="off" type="text" name="email"
+									required="" class="registration__input"> <span>Это обязательное поле</span>
+							</div>
+							<div class="registration__item input">
+								<label for="email" autocomplete="off" class="registration__label">ИНН<span>*</span></label>
+								<input autocomplete="off" type="text" name="email" required="" class="registration__input">
+								<span>Это обязательное поле</span>
+							</div>
+							<div class="registration__item input _kpp">
+								<label for="email" autocomplete="off" class="registration__label">КПП<span>*</span></label>
+								<input autocomplete="off" type="text" name="email" required="" class="registration__input">
+								<span>Это обязательное поле</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-popup__block">
+						<h2 class="form-popup__title">Юридический адрес:</h2>
+						<div class="form-popup__inputs">
+							<div drop-menu-choose="" class="registration__item">
+								<input autocomplete="off" drop-value-choose="" required="" type="text"
+									class="registration__value" data-input="" placeholder="Страна">
+								<ul drop-list-choose="" class="registration__list">
+									<li drop-item-choose="">
+										<a href="#" class="registration__link">Москва</a>
+									</li>
+									<li drop-item-choose="">
+										<a href="#" class="registration__link">Санкт-петербург</a>
+									</li>
+									<li drop-item-choose="">
+										<a href="#" class="registration__link">Иркутск</a>
+									</li>
+								</ul>
+							</div>
+							<div drop-menu-choose="" class="registration__item">
+								<input autocomplete="off" drop-value-choose="" required="" type="text"
+									class="registration__value" data-input="" placeholder="Регион">
+								<ul drop-list-choose="" class="registration__list">
+									<li drop-item-choose="">
+										<a href="#" class="registration__link">Москвовская область</a>
+									</li>
+									<li drop-item-choose="">
+										<a href="#" class="registration__link">Санкт-петербургская область</a>
+									</li>
+									<li drop-item-choose="">
+										<a href="#" class="registration__link">Иркутская область</a>
+									</li>
+								</ul>
+							</div>
+							<div class="registration__item input _two-cell">
+								<label for="email" autocomplete="off" class="registration__label">Адрес<span>*</span></label>
+								<input autocomplete="off" type="text" name="email" required="" class="registration__input">
+								<span>Это обязательное поле</span>
+								<p>Улица, дом, строение, квартира</p>
+							</div>
+							<div class="registration__item input _optional">
+								<label for="email" autocomplete="off" class="registration__label">Почтовый индекс</label> <input
+									autocomplete="off" type="text" name="email" required="" class="registration__input">
+							</div>
+							<div class="registration__item input">
+								<label for="email" autocomplete="off" class="registration__label">Телефон<span>*</span></label>
+								<input autocomplete="off" type="text" name="email" required="" class="registration__input">
+								<span>Это обязательное поле</span>
+							</div>
+						</div>
+					</div><button type="submit" class="form-popup__button">Изменить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</article>
