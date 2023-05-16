@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/icons.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>profile - page</title>
+	<link rel="shortcut icon" href="#">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="top"></div>
+		<!-- @import 'pages/header.html' -->
+		<article class="fixed">
+			<div class='fixed__container container'>
+				<div class="fixed__body">
+					<a href="index.html" class="fixed__item icon-home ">
+						Главная
+					</a>
+					<a href="#" class="fixed__item open-catalog icon-catalog">
+						Каталог
+					</a>
+					<a href="cart.html" class="fixed__item icon-cart open-cart">
+						Корзина
+						<span>21</span>
+					</a>
+					<a href="#" class="fixed__item icon-favourite open-favourite">
+						Избранное
+					</a>
+					<a href="profile.html" class="fixed__item icon-profile open-profile _active">
+						Профиль
+					</a>
+				</div>
+			</div>
+		</article>
+		<!-- @import 'pages/burger.html' -->
+		<main class="page">
+			<div class="page__current current">
+				<div class='current__container container'>
+					<div class="current__text">
+						<span>Главная страница/<a href="index.html">Профиль</a></span>
+						<span class="icon-arrow-len-back"><a href="index.html">Назад</a></span>
+					</div>
+					<h1 class="current__title title">Профиль пользователя</h1>
+				</div>
+			</div>
+			<section class="page__profile profile">
+
+				<div class="profile__body">
+					<article class="profile__sidebar sidebar-profile">
+						<div class='sidebar-profile__container container'>
+							<div class="sidebar-profile__body">
+								<div class="sidebar-profile__tabs">
+									<a href="#" data-tab-path="profile-information"
+										class="sidebar-profile__tab icon-profile _active">Профиль пользователя</a>
+									<a href="#" data-tab-path="profile-task" class="sidebar-profile__tab icon-orders">Текущие
+										заказы</a>
+									<a href="#" data-tab-path="profile-favourite"
+										class="sidebar-profile__tab icon-favourite">Избранное</a>
+
+								</div>
+							</div>
+						</div>
+					</article>
+					<section data-tab-target id="profile-information"
+						class="profile__information information _profile-item _active">
+						<div class='information__container container'>
+							<form action="#" method="POST" class="information__body">
+								<div class="information__block">
+									<h2 class="information__title profile-title">
+										Персональная информация
+									</h2>
+									<div class="information__columns">
+										<article class="information__column _information-block">
+											<div class="information__item item-information">
+												<div class="item-information__label">
+													<a href="#" class="item-information__ico icon-profile"></a>
+													<a href="#" class="item-information__name">Василий Иванов</a>
+													<a href="#changeNameProfile"
+														class="item-information__change icon-pencil _pencil open-popup"></a>
+												</div>
+
+
+												<div class="item-information__main main-information">
+													<div class="main-information__item">
+														<div class="main-information__text">
+															Телефон: <span> +7 (999) 123-45-67</span>
+														</div>
+														<a href="#changeTelProfile"
+															class="main-information__change icon-pencil _pencil open-popup"></a>
+													</div>
+													<div class="main-information__item">
+														<div class="main-information__text">
+															E-mail: <span> ivanov@mail.ru <mark> (подтвержден)</mark></span>
+														</div>
+														<a href="#changeEmailProfile"
+															class="main-information__change icon-pencil _pencil open-popup"></a>
+													</div>
+												</div>
+											</div>
+										</article>
+									</div>
+
+								</div>
+								<div class="information__block">
+									<h2 class="information__title profile-title">
+										Информация о компании
+									</h2>
+									<div class="information__columns">
+										<article class="information__column">
+											<div class="information__item item-information">
+												<h3 class="item-information__title">
+													ИП Иванов В.И.
+												</h3>
+												<div class="item-information__text">
+													ИНН: 360000112933
+												</div>
+												<div class="item-information__checkbox _checkbox">
+													<input type="text" required type="checkbox" name="activity">
+													<p>Активировать</p>
+													<p class="_icon"><span class="icon-check">Активна</span></p>
+												</div>
+												<div class="item-information__actions">
+													<a href="#changeInformationCompany"
+														class="item-information__action _pencil icon-pencil open-popup">
+
+													</a>
+													<a href="#" class="item-information__action icon-trash _delete"></a>
+												</div>
+											</div>
+										</article>
+										<article class="information__column">
+											<div class="information__item item-information">
+												<h3 class="item-information__title">
+													ООО Торговый дом
+													«АвтоМир»
+												</h3>
+												<div class="item-information__text">
+													ИНН: 360000112933
+												</div>
+												<div class="item-information__checkbox _checkbox">
+													<input type="text" required type="checkbox" name="activity">
+													<p>Активировать</p>
+													<p class="_icon"><span class="icon-check">Активна</span></p>
+												</div>
+												<div class="item-information__actions">
+													<a href="#changeInformationCompany"
+														class="item-information__action _pencil icon-pencil open-popup">
+
+													</a>
+													<a href="#" class="item-information__action icon-trash _delete"></a>
+												</div>
+											</div>
+										</article>
+										<article class="information__column">
+											<div class="information__item item-information">
+												<div class="item-information__body">
+													<a href="#changeInformationCompany"
+														class="item-information__add open-popup icon-close-add">
+														Добавить компанию
+													</a>
+												</div>
+											</div>
+										</article>
+									</div>
+
+								</div>
+								<div class="information__block">
+									<h2 class="information__title profile-title">
+										Адреса доставки
+									</h2>
+									<div class="information__columns">
+										<article class="information__column">
+											<div class="information__item item-information">
+
+												<div class="item-information__text">
+													г. Краснодар
+													ул. Промышленная, вл.11 ст.5
+												</div>
+												<div class="item-information__checkbox _checkbox">
+													<input type="text" required type="checkbox" name="activity">
+													<p>Активировать</p>
+													<p class="_icon"><span class="icon-check">Активна</span></p>
+												</div>
+												<div class="item-information__actions">
+													<a href="#changeInformationCompany"
+														class="item-information__action icon-pencil _pencil open-popup">
+
+													</a>
+													<a href="#" class="item-information__action icon-trash _delete"></a>
+												</div>
+											</div>
+										</article>
+										<article class="information__column">
+											<div class="information__item item-information">
+												<div class="item-information__text">
+													г. Краснодар
+													ул. Ленина, д. 115
+												</div>
+												<div class="item-information__checkbox _checkbox">
+													<input type="text" required type="checkbox" name="activity">
+													<p>Активировать</p>
+													<p class="_icon"><span class="icon-check">Активна</span></p>
+												</div>
+												<div class="item-information__actions">
+													<a href="#changeInformationCompany"
+														class="item-information__action icon-pencil _pencil open-popup">
+
+													</a>
+													<a href="#" class="item-information__action icon-trash _delete"></a>
+												</div>
+											</div>
+										</article>
+										<article class="information__column">
+											<div class="information__item item-information">
+												<div class="item-information__body">
+													<a href="#changeInformationCompany"
+														class="item-information__add open-popup icon-close-add">
+														Добавить компанию
+													</a>
+												</div>
+											</div>
+										</article>
+									</div>
+
+								</div>
+								<div class="information__block ">
+									<h2 class="information__title profile-title">
+										Пароль
+									</h2>
+									<div class="information__columns">
+										<article class="information__column">
+											<div class="information__item item-information">
+												<div class="item-information__password">
+													<div class="item-information__password-text">
+														Пароль установлен 26.09.2022
+													</div>
+													<a href="#changePassword"
+														class="item-information__password-link _pencil icon-pencil open-popup"></a>
+												</div>
+											</div>
+										</article>
+									</div>
+
+								</div>
+								<div class="registration__block _not-border">
+									<h2 class="registration__title profile-title">
+										Подписки
+									</h2>
+									<div class="registration__checkboxes">
+										<article class="registration__checkbox-wrapper _checkbox _gray-checkbox">
+											<div class="registration__checkbox ">
+												<span class="_check"></span>
+												<input type="checkbox" value="subscribe" name="sends">
+												<label for="sends">Рассылка</label>
+											</div>
+											<div class="registration__activity">
+												<span>Активировать</span>
+												<span class="icon-check">Активна</span>
+											</div>
+										</article>
+										<article class="registration__checkbox-wrapper _checkbox _gray-checkbox">
+											<div class="registration__checkbox ">
+												<span class="_check"></span>
+												<input type="checkbox" value="subscribe" name="price-list">
+												<label for="price-list">Прайс-лист</label>
+											</div>
+											<div class="registration__activity">
+												<span>Активировать</span>
+												<span class="icon-check">Активна</span>
+											</div>
+										</article>
+										<article class="registration__checkbox-wrapper _checkbox _gray-checkbox">
+											<div class="registration__checkbox ">
+												<span class="_check"> </span>
+												<input type="checkbox" value="subscribe" name="catalog">
+												<label for="catalog">Каталог</label>
+											</div>
+											<div class="registration__activity">
+												<span>Активировать</span>
+												<span class="icon-check">Активна</span>
+											</div>
+										</article>
+									</div>
+
+								</div>
+								<button type="submit" class="information__button">Выйти из аккаунта</button>
+							</form>
+						</div>
+					</section>
+
+					<section data-tab-target id="profile-favourite"
+						class="page__products products _many _catalog _profile-item">
+						<div class='products__container container'>
+							<div class="products__body">
+								<div class="products__filters ">
+									<a href="#" class="products__filter "><span class="icon-arrow-len-down">По скидке</span></a>
+									<a href="#" class="products__filter "><span class="icon-arrow-len-down">По каталожному
+											номеру</span></a>
+									<a href="#" class="products__filter  "><span class="icon-arrow-len-down">По
+											названию</span></a>
+									<a href="#" class="products__filter _active"><span class="icon-arrow-len-down ">По
+											цене</span></a>
+								</div>
+								<div class="products__columns">
+									<article class="products__product product">
+										<div class="product__action">
+											Акция
+										</div>
+										<a href="#" class="product__favourite icon-favourite open-favourite _active"></a>
+										<div class="product__item item-product">
+											<a href="product.html" class="item-product__image">
+												<img src="img/products/01.png" alt="productImage">
+											</a>
+											<div class="item-product__price">
+												<div class="item-product__current-price">
+													999999 ₽
+												</div>
+												<div class="item-product__old-price">
+													999999 ₽
+												</div>
+											</div>
+											<div class="item-product__text">
+												Фара светодиодная дополнительная круглая, направленный свет, 14 диодов, 42W,
+												(115х42х142)
+											</div>
+											<div class="item-product__number">
+												Кат. номер: <span>AE42R-14LED-42HC</span>
+											</div>
+											<div class="item-product__article">
+												Артикул: 09.1890
+											</div>
+											<div class="item-product__brend">
+												Бренд: <a href="#">Автоэлектрика</a>
+											</div>
+											<a href="#" class="item-product__cart icon-cart open-cart">В корзину</a>
+										</div>
+									</article>
+
+								</div>
+								<div class="products__controls">
+									<a href="#" class="products__button">Показать ещё 20</a>
+									<div class="products__pages">
+										<a href="#" class="products__page icon-arrow-len-back">
+
+										</a>
+										<a href="#" class="products__page _active">
+											1
+										</a>
+										<a href="#" class="products__page">
+											2
+										</a>
+
+										<a href="#" class="products__page">
+											3
+										</a>
+										<a href="#" class="products__page">
+											4
+										</a>
+										<a href="#" class="products__page">
+											5
+										</a>
+
+										<a href="#" class="products__page">
+											6
+										</a>
+										<a href="#" class="products__page">
+											7
+										</a>
+
+										<a href="#" class="products__page">
+											...
+										</a>
+										<a href="#" class="products__page">
+											12
+										</a>
+										<a href="#" class="products__page icon-arrow-len-next">
+
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				</div>
+
+			</section>
+		</main>
+		<!-- @import 'pages/popups.html' -->
+		<!-- @import 'pages/footer.html' -->
+	</div>
+
+
+	<!----------->
+	<script src="js/isMobile.js"></script>
+	<!----------->
+	<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>
+	<!----------->
+	<script src="js/custom.js"></script>
+	<script src="js/forms.js"></script>
+	<script src="js/ibg.js"></script>
+	<!------------>
+	<script src="js/tabs.js"></script>
+	<script src="js/popup.js"></script>
+	<script src="js/spoller.js"></script>
+	<script src="js/rating.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/parallaxOnScroll.js"></script>
+	<script src="js/anim.js"></script>
+	<!------------>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

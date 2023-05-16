@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/icons.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>registration - page</title>
+	<link rel="shortcut icon" href="#">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="top"></div>
+		<!-- @import 'pages/header.html' -->
+		<article class="fixed">
+			<div class='fixed__container container'>
+				<div class="fixed__body">
+					<a href="index.html" class="fixed__item icon-home ">
+						Главная
+					</a>
+					<a href="#" class="fixed__item open-catalog icon-catalog">
+						Каталог
+					</a>
+					<a href="cart.html" class="fixed__item icon-cart open-cart">
+						Корзина
+						<span>21</span>
+					</a>
+					<a href="#" class="fixed__item icon-favourite open-favourite">
+						Избранное
+					</a>
+					<a href="profile.html" class="fixed__item icon-profile open-profile _active">
+						Профиль
+					</a>
+				</div>
+			</div>
+		</article>
+		<!-- @import 'pages/burger.html' -->
+		<main class="page">
+			<div class="page__current current">
+				<div class='current__container container'>
+					<div class="current__text">
+						<span>Главная страница/<a href="index.html">Регистрация</a></span>
+						<span class="icon-arrow-len-back"><a href="index.html">Назад</a></span>
+					</div>
+					<h1 class="current__title title">Регистрация пользователя</h1>
+				</div>
+			</div>
+			<section class="page__registration registration">
+				<div class='registration__container container'>
+					<form action="#" method="POST" class="registration__form">
+						<div class="registration__block">
+							<h2 class="registration__title registration-title">
+								Персональная информация
+							</h2>
+							<div class="registration__items">
+								<div class="registration__item input ">
+									<label for="email" autocomplete="off"
+										class="registration__label">Фамилия<span>*</span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<span>Это обязательное поле</span>
+								</div>
+								<div class="registration__item input">
+									<label for="email" autocomplete="off" class="registration__label">Имя<span>*</span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<span>Это обязательное
+										поле</span>
+								</div>
+								<div class="registration__item input _optional">
+									<label for="email" autocomplete="off" class="registration__label">Это незаполненное
+										поле<span></span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+								</div>
+							</div>
+						</div>
+						<div class="registration__block">
+							<h2 class="registration__title registration-title">
+								Контактная информация
+							</h2>
+							<div class="registration__items">
+								<div class="registration__item input ">
+									<label for="email" autocomplete="off" class="registration__label">Адрес электронной
+										почты<span>*</span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<span>Это обязательное поле</span>
+								</div>
+								<div class="registration__item input">
+									<label for="email" autocomplete="off"
+										class="registration__label">Телефон<span>*</span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<span>Это обязательное
+										поле</span>
+								</div>
+
+							</div>
+						</div>
+						<div class="registration__block">
+							<h2 class="registration__title registration-title">
+								Информация о компании
+							</h2>
+							<div class="registration__items">
+								<div class="registration__item choose">
+									<a href="#" class="registration__choose-item choose-item _ipp _active"><span>ИП</span></a>
+									<a href="#" class="registration__choose-item choose-item"><span>Юридическое лицо</span></a>
+								</div>
+								<div class="registration__item input">
+									<label for="email" autocomplete="off" class="registration__label">Описание
+										значения<span>*</span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<span>Это обязательное
+										поле</span>
+								</div>
+								<div class="registration__item input">
+									<label for="email" autocomplete="off" class="registration__label">ИНН<span>*</span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<span>Это обязательное
+										поле</span>
+								</div>
+								<div class="registration__item input _kpp">
+									<label for="email" autocomplete="off" class="registration__label">КПП<span>*</span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<span>Это обязательное
+										поле</span>
+								</div>
+							</div>
+						</div>
+						<div class="registration__block">
+							<h2 class="registration__title registration-title">
+								Юридический адрес:
+							</h2>
+							<div class="registration__items">
+								<div drop-menu-choose class="registration__item">
+									<input autocomplete="off" drop-value-choose required type="text" class="registration__value"
+										data-input placeholder="Страна">
+									<span class="icon-arrow-down _drop-arrow"></span>
+									<ul drop-list-choose class="registration__list">
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Москва
+											</a>
+										</li>
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Санкт-петербург
+											</a>
+										</li>
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Иркутск
+											</a>
+										</li>
+									</ul>
+
+								</div>
+								<div drop-menu-choose class="registration__item">
+									<input autocomplete="off" drop-value-choose required type="text" class="registration__value"
+										data-input placeholder="Регион">
+									<span class="icon-arrow-down _drop-arrow"></span>
+
+									<ul drop-list-choose class="registration__list">
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Москвовская область
+											</a>
+										</li>
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Санкт-петербургская область
+											</a>
+										</li>
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Иркутская область
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="registration__item input _two-cell">
+									<label for="email" autocomplete="off" class="registration__label">Адрес<span>*</span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<span>Это обязательное поле</span>
+								</div>
+								<div class="registration__item input _optional">
+									<label for="email" autocomplete="off" class="registration__label ">Почтовый индекс
+										<span></span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+
+								</div>
+								<div class="registration__item input ">
+									<label for="email" autocomplete="off"
+										class="registration__label">Телефон<span>*</span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<span>Это обязательное поле</span>
+								</div>
+							</div>
+						</div>
+						<div class="registration__block">
+							<h2 class="registration__title registration-title">
+								Адрес доставки:
+							</h2>
+							<div class="registration__items">
+								<div drop-menu-choose class="registration__item">
+									<input autocomplete="off" drop-value-choose required type="text" class="registration__value"
+										data-input placeholder="Страна">
+									<span class="icon-arrow-down _drop-arrow"></span>
+									<ul drop-list-choose class="registration__list">
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Москва
+											</a>
+										</li>
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Санкт-петербург
+											</a>
+										</li>
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Иркутск
+											</a>
+										</li>
+									</ul>
+
+								</div>
+								<div drop-menu-choose class="registration__item">
+									<input autocomplete="off" drop-value-choose required type="text" class="registration__value"
+										data-input placeholder="Регион">
+									<span class="icon-arrow-down _drop-arrow"></span>
+
+									<ul drop-list-choose class="registration__list">
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Москвовская область
+											</a>
+										</li>
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Санкт-петербургская область
+											</a>
+										</li>
+										<li drop-item-choose>
+											<a href="#" class="registration__link">
+												Иркутская область
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="registration__item input _two-cell _optional">
+									<label for="email" autocomplete="off" class="registration__label">Адрес
+										<span></span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<p>Улица, дом, строение, квартира</p>
+								</div>
+								<div class="registration__item input _optional">
+									<label for="email" autocomplete="off" class="registration__label">Телефон
+										<span></span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+								</div>
+							</div>
+						</div>
+						<div class="registration__block">
+							<h2 class="registration__title registration-title">
+								Пароль:
+							</h2>
+							<div class="registration__items">
+								<div class="registration__item input">
+									<label for="email" autocomplete="off"
+										class="registration__label">Пароль<span>*</span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<span>Это обязательное
+										поле</span>
+								</div>
+								<div class="registration__item input ">
+									<label for="email" autocomplete="off" class="registration__label">Повторение
+										пароля<span>*</span></label>
+									<input autocomplete="off" type="text" name="email" required class="registration__input">
+									<span>Это обязательное
+										поле</span>
+								</div>
+							</div>
+						</div>
+						<div class="registration__block _not-border">
+							<h2 class="registration__title registration-title">
+								Подписки
+							</h2>
+							<div class="registration__checkboxes">
+								<article class="registration__checkbox-wrapper _checkbox _gray-checkbox">
+									<div class="registration__checkbox ">
+										<span class="_check"></span>
+										<input type="checkbox" value="subscribe" name="sends">
+										<label for="sends">Рассылка</label>
+									</div>
+									<div class="registration__activity">
+										<span>Активировать</span>
+										<span class="icon-check">Активна</span>
+									</div>
+								</article>
+								<article class="registration__checkbox-wrapper _checkbox _gray-checkbox">
+									<div class="registration__checkbox ">
+										<span class="_check"></span>
+										<input type="checkbox" value="subscribe" name="price-list">
+										<label for="price-list">Прайс-лист</label>
+									</div>
+									<div class="registration__activity">
+										<span>Активировать</span>
+										<span class="icon-check">Активна</span>
+									</div>
+								</article>
+								<article class="registration__checkbox-wrapper _checkbox _gray-checkbox">
+									<div class="registration__checkbox ">
+										<span class="_check"> </span>
+										<input type="checkbox" value="subscribe" name="catalog">
+										<label for="catalog">Каталог</label>
+									</div>
+									<div class="registration__activity">
+										<span>Активировать</span>
+										<span class="icon-check">Активна</span>
+									</div>
+								</article>
+							</div>
+
+						</div>
+						<div class="registration__agreement">
+							<div class="registration__agreement-checkbox-wrapper  _checkbox">
+								<span></span>
+								<input type="checkbox" value="agreement-agreement" name="agreement"
+									class="registration__agreement-checkbox">
+								<label for="agreement" class="registration__agreement-checkbox-text">
+									Я соглашаюсь на обработку персональных данных
+									в соответствии c <a href="#"> Политикой обработки персональных данных</a>
+								</label>
+							</div>
+						</div>
+						<button type="submit" class="registration__button">Зарегистрироваться</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<!-- @import 'pages/popups.html' -->
+		<!-- @import 'pages/footer.html' -->
+	</div>
+
+
+	<!----------->
+	<script src="js/isMobile.js"></script>
+	<!----------->
+	<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>
+	<!----------->
+	<script src="js/custom.js"></script>
+	<script src="js/forms.js"></script>
+	<script src="js/ibg.js"></script>
+	<!------------>
+	<script src="js/tabs.js"></script>
+	<script src="js/popup.js"></script>
+	<script src="js/spoller.js"></script>
+	<script src="js/rating.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/parallaxOnScroll.js"></script>
+	<script src="js/anim.js"></script>
+	<!------------>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
